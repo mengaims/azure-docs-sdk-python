@@ -1,0 +1,197 @@
+### YamlMime:PythonClass
+uid: azure.mgmt.paloaltonetworksngfw.models.FirewallResourceUpdateProperties
+name: FirewallResourceUpdateProperties
+fullName: azure.mgmt.paloaltonetworksngfw.models.FirewallResourceUpdateProperties
+module: azure.mgmt.paloaltonetworksngfw.models
+inheritances:
+- azure.mgmt.paloaltonetworksngfw._serialization.Model
+summary: The updatable properties of the FirewallResource.
+constructor:
+  syntax: 'FirewallResourceUpdateProperties(*, pan_etag: str | None = None, network_profile:
+    _models.NetworkProfile | None = None, is_panorama_managed: str | _models.BooleanEnum
+    | None = None, panorama_config: _models.PanoramaConfig | None = None, associated_rulestack:
+    _models.RulestackDetails | None = None, dns_settings: _models.DNSSettings | None
+    = None, front_end_settings: List[_models.FrontendSetting] | None = None, plan_data:
+    _models.PlanData | None = None, marketplace_details: _models.MarketplaceDetails
+    | None = None, **kwargs: Any)'
+  parameters:
+  - name: pan_etag
+    description: panEtag info.
+    types:
+    - <xref:str>
+  - name: network_profile
+    description: Network settings.
+    types:
+    - <xref:azure.mgmt.paloaltonetworks.models.NetworkProfile>
+  - name: is_panorama_managed
+    description: 'Panorama Managed: Default is False. Default will be CloudSec
+
+      managed. Known values are: "TRUE" and "FALSE".'
+    types:
+    - <xref:str>
+    - <xref:azure.mgmt.paloaltonetworks.models.BooleanEnum>
+  - name: panorama_config
+    description: Panorama Configuration.
+    types:
+    - <xref:azure.mgmt.paloaltonetworks.models.PanoramaConfig>
+  - name: associated_rulestack
+    description: Associated Rulestack.
+    types:
+    - <xref:azure.mgmt.paloaltonetworks.models.RulestackDetails>
+  - name: dns_settings
+    description: DNS settings for Firewall.
+    types:
+    - <xref:azure.mgmt.paloaltonetworks.models.DNSSettings>
+  - name: front_end_settings
+    description: Frontend settings for Firewall.
+    types:
+    - <xref:azure.mgmt.paloaltonetworksngfw.aio.operations.CertificateObjectGlobalRulestackOperations.list>[<xref:azure.mgmt.paloaltonetworks.models.FrontendSetting>]
+  - name: plan_data
+    description: Billing plan information.
+    types:
+    - <xref:azure.mgmt.paloaltonetworks.models.PlanData>
+  - name: marketplace_details
+    description: Marketplace details.
+    types:
+    - <xref:azure.mgmt.paloaltonetworks.models.MarketplaceDetails>
+variables:
+- description: panEtag info.
+  name: pan_etag
+  types:
+  - <xref:str>
+- description: Network settings.
+  name: network_profile
+  types:
+  - <xref:azure.mgmt.paloaltonetworks.models.NetworkProfile>
+- description: 'Panorama Managed: Default is False. Default will be CloudSec
+
+    managed. Known values are: "TRUE" and "FALSE".'
+  name: is_panorama_managed
+  types:
+  - <xref:str>
+  - <xref:azure.mgmt.paloaltonetworks.models.BooleanEnum>
+- description: Panorama Configuration.
+  name: panorama_config
+  types:
+  - <xref:azure.mgmt.paloaltonetworks.models.PanoramaConfig>
+- description: Associated Rulestack.
+  name: associated_rulestack
+  types:
+  - <xref:azure.mgmt.paloaltonetworks.models.RulestackDetails>
+- description: DNS settings for Firewall.
+  name: dns_settings
+  types:
+  - <xref:azure.mgmt.paloaltonetworks.models.DNSSettings>
+- description: Frontend settings for Firewall.
+  name: front_end_settings
+  types:
+  - <xref:list>[<xref:azure.mgmt.paloaltonetworks.models.FrontendSetting>]
+- description: Billing plan information.
+  name: plan_data
+  types:
+  - <xref:azure.mgmt.paloaltonetworks.models.PlanData>
+- description: Marketplace details.
+  name: marketplace_details
+  types:
+  - <xref:azure.mgmt.paloaltonetworks.models.MarketplaceDetails>
+methods:
+- uid: azure.mgmt.paloaltonetworksngfw.models.FirewallResourceUpdateProperties.as_dict
+  name: as_dict
+  summary: "Return a dict that can be serialized using json.dump.\n\nAdvanced usage\
+    \ might optionally use a callback as parameter:\n\nKey is the attribute name used\
+    \ in Python. Attr_desc\nis a dict of metadata. Currently contains 'type' with\
+    \ the\nmsrest type and 'key' with the RestAPI encoded key.\nValue is the current\
+    \ value in this object.\n\nThe string returned will be used to serialize the key.\n\
+    If the return type is a list, this is considered hierarchical\nresult dict.\n\n\
+    See the three examples in this file:\n\n* attribute_transformer \n\n* full_restapi_key_transformer\
+    \ \n\n* last_restapi_key_transformer \n\nIf you want XML serialization, you can\
+    \ pass the kwargs is_xml=True."
+  signature: 'as_dict(keep_readonly: bool = True, key_transformer: ~typing.Callable[[str,
+    ~typing.Dict[str, ~typing.Any], ~typing.Any], ~typing.Any] = <function attribute_transformer>,
+    **kwargs: ~typing.Any) -> MutableMapping[str, Any]'
+  parameters:
+  - name: key_transformer
+    description: A key transformer function.
+    types:
+    - <xref:function>
+  - name: keep_readonly
+    defaultValue: 'True'
+  return:
+    description: A dict JSON compatible object
+    types:
+    - <xref:dict>
+- uid: azure.mgmt.paloaltonetworksngfw.models.FirewallResourceUpdateProperties.deserialize
+  name: deserialize
+  summary: Parse a str using the RestAPI syntax and return a model.
+  signature: 'deserialize(data: Any, content_type: str | None = None) -> ModelType'
+  parameters:
+  - name: data
+    description: A str using RestAPI structure. JSON by default.
+    isRequired: true
+    types:
+    - <xref:str>
+  - name: content_type
+    description: JSON by default, set application/xml if XML.
+    defaultValue: None
+    types:
+    - <xref:str>
+  return:
+    description: An instance of this model
+  exceptions:
+  - type: DeserializationError if something went wrong
+- uid: azure.mgmt.paloaltonetworksngfw.models.FirewallResourceUpdateProperties.enable_additional_properties_sending
+  name: enable_additional_properties_sending
+  signature: enable_additional_properties_sending() -> None
+- uid: azure.mgmt.paloaltonetworksngfw.models.FirewallResourceUpdateProperties.from_dict
+  name: from_dict
+  summary: 'Parse a dict using given key extractor return a model.
+
+
+    By default consider key
+
+    extractors (rest_key_case_insensitive_extractor, attribute_key_case_insensitive_extractor
+
+    and last_rest_key_case_insensitive_extractor)'
+  signature: 'from_dict(data: Any, key_extractors: Callable[[str, Dict[str, Any],
+    Any], Any] | None = None, content_type: str | None = None) -> ModelType'
+  parameters:
+  - name: data
+    description: A dict using RestAPI structure
+    isRequired: true
+    types:
+    - <xref:dict>
+  - name: content_type
+    description: JSON by default, set application/xml if XML.
+    defaultValue: None
+    types:
+    - <xref:str>
+  - name: key_extractors
+    defaultValue: None
+  return:
+    description: An instance of this model
+  exceptions:
+  - type: DeserializationError if something went wrong
+- uid: azure.mgmt.paloaltonetworksngfw.models.FirewallResourceUpdateProperties.is_xml_model
+  name: is_xml_model
+  signature: is_xml_model() -> bool
+- uid: azure.mgmt.paloaltonetworksngfw.models.FirewallResourceUpdateProperties.serialize
+  name: serialize
+  summary: 'Return the JSON that would be sent to azure from this model.
+
+
+    This is an alias to *as_dict(full_restapi_key_transformer, keep_readonly=False)*.
+
+
+    If you want XML serialization, you can pass the kwargs is_xml=True.'
+  signature: 'serialize(keep_readonly: bool = False, **kwargs: Any) -> MutableMapping[str,
+    Any]'
+  parameters:
+  - name: keep_readonly
+    description: If you want to serialize the readonly attributes
+    defaultValue: 'False'
+    types:
+    - <xref:bool>
+  return:
+    description: A dict JSON compatible object
+    types:
+    - <xref:dict>

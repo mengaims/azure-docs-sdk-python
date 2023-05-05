@@ -1,0 +1,241 @@
+### YamlMime:PythonClass
+uid: azure.mgmt.paloaltonetworksngfw.models.SupportInfo
+name: SupportInfo
+fullName: azure.mgmt.paloaltonetworksngfw.models.SupportInfo
+module: azure.mgmt.paloaltonetworksngfw.models
+inheritances:
+- azure.mgmt.paloaltonetworksngfw._serialization.Model
+summary: Support information for the resource.
+constructor:
+  syntax: 'SupportInfo(*, product_sku: str | None = None, product_serial: str | None
+    = None, account_registered: str | _models.BooleanEnum | None = None, account_id:
+    str | None = None, user_domain_supported: str | _models.BooleanEnum | None = None,
+    user_registered: str | _models.BooleanEnum | None = None, free_trial: str | _models.BooleanEnum
+    | None = None, free_trial_days_left: int | None = None, free_trial_credit_left:
+    int | None = None, help_url: str | None = None, support_url: str | None = None,
+    register_url: str | None = None, **kwargs: Any)'
+  parameters:
+  - name: product_sku
+    description: product SKU associated with given resource.
+    types:
+    - <xref:str>
+  - name: product_serial
+    description: product Serial associated with given resource.
+    types:
+    - <xref:str>
+  - name: account_registered
+    description: 'account registered in Customer Support Portal. Known values are:
+
+      "TRUE" and "FALSE".'
+    types:
+    - <xref:str>
+    - <xref:azure.mgmt.paloaltonetworks.models.BooleanEnum>
+  - name: account_id
+    description: Support account associated with given resource.
+    types:
+    - <xref:str>
+  - name: user_domain_supported
+    description: 'user domain is supported in Customer Support Portal. Known
+
+      values are: "TRUE" and "FALSE".'
+    types:
+    - <xref:str>
+    - <xref:azure.mgmt.paloaltonetworks.models.BooleanEnum>
+  - name: user_registered
+    description: 'user registered in Customer Support Portal. Known values are: "TRUE"
+
+      and "FALSE".'
+    types:
+    - <xref:str>
+    - <xref:azure.mgmt.paloaltonetworks.models.BooleanEnum>
+  - name: free_trial
+    description: 'Product usage is in free trial period. Known values are: "TRUE"
+      and
+
+      "FALSE".'
+    types:
+    - <xref:str>
+    - <xref:azure.mgmt.paloaltonetworks.models.BooleanEnum>
+  - name: free_trial_days_left
+    description: Free trial days remaining.
+    types:
+    - <xref:int>
+  - name: free_trial_credit_left
+    description: Free trial credit remaining.
+    types:
+    - <xref:int>
+  - name: help_url
+    description: URL for paloaltonetworks live community.
+    types:
+    - <xref:str>
+  - name: support_url
+    description: URL for paloaltonetworks Customer Service Portal.
+    types:
+    - <xref:str>
+  - name: register_url
+    description: URL for registering product in paloaltonetworks Customer Service
+      Portal.
+    types:
+    - <xref:str>
+variables:
+- description: product SKU associated with given resource.
+  name: product_sku
+  types:
+  - <xref:str>
+- description: product Serial associated with given resource.
+  name: product_serial
+  types:
+  - <xref:str>
+- description: 'account registered in Customer Support Portal. Known values are:
+
+    "TRUE" and "FALSE".'
+  name: account_registered
+  types:
+  - <xref:str>
+  - <xref:azure.mgmt.paloaltonetworks.models.BooleanEnum>
+- description: Support account associated with given resource.
+  name: account_id
+  types:
+  - <xref:str>
+- description: 'user domain is supported in Customer Support Portal. Known values
+
+    are: "TRUE" and "FALSE".'
+  name: user_domain_supported
+  types:
+  - <xref:str>
+  - <xref:azure.mgmt.paloaltonetworks.models.BooleanEnum>
+- description: 'user registered in Customer Support Portal. Known values are: "TRUE"
+    and
+
+    "FALSE".'
+  name: user_registered
+  types:
+  - <xref:str>
+  - <xref:azure.mgmt.paloaltonetworks.models.BooleanEnum>
+- description: 'Product usage is in free trial period. Known values are: "TRUE" and
+    "FALSE".'
+  name: free_trial
+  types:
+  - <xref:str>
+  - <xref:azure.mgmt.paloaltonetworks.models.BooleanEnum>
+- description: Free trial days remaining.
+  name: free_trial_days_left
+  types:
+  - <xref:int>
+- description: Free trial credit remaining.
+  name: free_trial_credit_left
+  types:
+  - <xref:int>
+- description: URL for paloaltonetworks live community.
+  name: help_url
+  types:
+  - <xref:str>
+- description: URL for paloaltonetworks Customer Service Portal.
+  name: support_url
+  types:
+  - <xref:str>
+- description: URL for registering product in paloaltonetworks Customer Service Portal.
+  name: register_url
+  types:
+  - <xref:str>
+methods:
+- uid: azure.mgmt.paloaltonetworksngfw.models.SupportInfo.as_dict
+  name: as_dict
+  summary: "Return a dict that can be serialized using json.dump.\n\nAdvanced usage\
+    \ might optionally use a callback as parameter:\n\nKey is the attribute name used\
+    \ in Python. Attr_desc\nis a dict of metadata. Currently contains 'type' with\
+    \ the\nmsrest type and 'key' with the RestAPI encoded key.\nValue is the current\
+    \ value in this object.\n\nThe string returned will be used to serialize the key.\n\
+    If the return type is a list, this is considered hierarchical\nresult dict.\n\n\
+    See the three examples in this file:\n\n* attribute_transformer \n\n* full_restapi_key_transformer\
+    \ \n\n* last_restapi_key_transformer \n\nIf you want XML serialization, you can\
+    \ pass the kwargs is_xml=True."
+  signature: 'as_dict(keep_readonly: bool = True, key_transformer: ~typing.Callable[[str,
+    ~typing.Dict[str, ~typing.Any], ~typing.Any], ~typing.Any] = <function attribute_transformer>,
+    **kwargs: ~typing.Any) -> MutableMapping[str, Any]'
+  parameters:
+  - name: key_transformer
+    description: A key transformer function.
+    types:
+    - <xref:function>
+  - name: keep_readonly
+    defaultValue: 'True'
+  return:
+    description: A dict JSON compatible object
+    types:
+    - <xref:dict>
+- uid: azure.mgmt.paloaltonetworksngfw.models.SupportInfo.deserialize
+  name: deserialize
+  summary: Parse a str using the RestAPI syntax and return a model.
+  signature: 'deserialize(data: Any, content_type: str | None = None) -> ModelType'
+  parameters:
+  - name: data
+    description: A str using RestAPI structure. JSON by default.
+    isRequired: true
+    types:
+    - <xref:str>
+  - name: content_type
+    description: JSON by default, set application/xml if XML.
+    defaultValue: None
+    types:
+    - <xref:str>
+  return:
+    description: An instance of this model
+  exceptions:
+  - type: DeserializationError if something went wrong
+- uid: azure.mgmt.paloaltonetworksngfw.models.SupportInfo.enable_additional_properties_sending
+  name: enable_additional_properties_sending
+  signature: enable_additional_properties_sending() -> None
+- uid: azure.mgmt.paloaltonetworksngfw.models.SupportInfo.from_dict
+  name: from_dict
+  summary: 'Parse a dict using given key extractor return a model.
+
+
+    By default consider key
+
+    extractors (rest_key_case_insensitive_extractor, attribute_key_case_insensitive_extractor
+
+    and last_rest_key_case_insensitive_extractor)'
+  signature: 'from_dict(data: Any, key_extractors: Callable[[str, Dict[str, Any],
+    Any], Any] | None = None, content_type: str | None = None) -> ModelType'
+  parameters:
+  - name: data
+    description: A dict using RestAPI structure
+    isRequired: true
+    types:
+    - <xref:dict>
+  - name: content_type
+    description: JSON by default, set application/xml if XML.
+    defaultValue: None
+    types:
+    - <xref:str>
+  - name: key_extractors
+    defaultValue: None
+  return:
+    description: An instance of this model
+  exceptions:
+  - type: DeserializationError if something went wrong
+- uid: azure.mgmt.paloaltonetworksngfw.models.SupportInfo.is_xml_model
+  name: is_xml_model
+  signature: is_xml_model() -> bool
+- uid: azure.mgmt.paloaltonetworksngfw.models.SupportInfo.serialize
+  name: serialize
+  summary: 'Return the JSON that would be sent to azure from this model.
+
+
+    This is an alias to *as_dict(full_restapi_key_transformer, keep_readonly=False)*.
+
+
+    If you want XML serialization, you can pass the kwargs is_xml=True.'
+  signature: 'serialize(keep_readonly: bool = False, **kwargs: Any) -> MutableMapping[str,
+    Any]'
+  parameters:
+  - name: keep_readonly
+    description: If you want to serialize the readonly attributes
+    defaultValue: 'False'
+    types:
+    - <xref:bool>
+  return:
+    description: A dict JSON compatible object
+    types:
+    - <xref:dict>
